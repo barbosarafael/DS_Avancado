@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Virtualenv
+
+01Reg_Linear/reg_linear_venv/
