@@ -138,5 +138,6 @@ wcwidth==0.2.4
 webencodings==0.5.1
 widgetsnbextension==3.5.1
 xlrd==1.2.0
+yellowbrick==1.1
 zipp==1.0.0
 zope.interface==4.7.1
