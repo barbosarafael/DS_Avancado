@@ -131,4 +131,3 @@ dmypy.json
 # Virtualenv
 
 01Reg_Linear/reg_linear_venv/
-02RidgeLasso/venv_ridge_lasso/
