@@ -8,6 +8,8 @@ Aqui irei reunir os materiais do grupo de DS Avançado. Exemplos abaixo.
 
 - [Materiais](https://github.com/barbosarafael/Grupo_DS_Avancado/tree/master/01Reg_Linear/materiais)
 
+## [Tema 2: Regressão Linear](https://github.com/barbosarafael/Grupo_DS_Avancado/blob/master/02Lasso_Ridge/notebook_lasso_ridge.ipynb)
+
 
 ## Wine Project
 
