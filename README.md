@@ -9,3 +9,6 @@ Aqui irei reunir os materiais do grupo de DS Avançado. Exemplos abaixo.
 - [Materiais](https://github.com/barbosarafael/Grupo_DS_Avancado/tree/master/01Reg_Linear/materiais)
 
 
+## Wine Project
+
+- [Notebook](https://github.com/barbosarafael/Grupo_DS_Avancado/blob/master/wine_projeto/notebook_projeto.ipynb)
