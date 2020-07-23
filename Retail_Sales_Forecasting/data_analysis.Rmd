@@ -1,0 +1,72 @@
+---
+title: "Retail Sales Forecasting - Exploratory Data Analysis"
+author: "Autor: Rafael Barbosa da Silva | "
+date: "Data: 06/04/2020"
+output:
+  rmarkdown::github_document:
+  fig_width: 10
+fig_height: 5
+theme: cosmo
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Nota
+
+O presente documento tem como único e simples objetivo de fazer a análise exploratória dos dados, a parte de modelagem, cabe ao software Python.
+
+
+## Pacotes utilizados
+
+
+```{r pacotes, echo = TRUE, warning = FALSE, message = F}
+
+require(tidyverse)
+require(lubridate)
+
+
+```
+
+
+## Dados utilizados
+
+```{r mostrar_dados, echo = TRUE, warning = FALSE, message = F}
+
+dados <- read_csv(file = "data/mock_kaggle.csv")
+
+
+dados %>% 
+  head()
+
+
+```
+
+## Série temporal
+
+- É possível notar que em alguns dias da série histórica 
+
+```{r serie_historica, echo = TRUE, warning = FALSE, message = F}
+
+dados %>% 
+  ggplot(data = ., aes(x = data, y = venda)) +
+  geom_line() +
+  # geom_point() +
+  theme_minimal(14) +
+  labs(x = "Data", y = "Preço")
+
+
+
+```
+
+
+# Verificar se é estacionária
+
+
+# Dicas:
+
+- Seno
+- 
