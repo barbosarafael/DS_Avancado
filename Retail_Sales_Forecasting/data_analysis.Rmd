@@ -1,21 +1,20 @@
 ---
-title: "Retail Sales Forecasting - Exploratory Data Analysis"
+title: "Retail Sales Forecasting"
 author: "Autor: Rafael Barbosa da Silva | "
 date: "Data: 06/04/2020"
 output:
   rmarkdown::github_document:
-  fig_width: 10
-fig_height: 5
 theme: cosmo
 ---
 
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, fig.align = "center", fig.width = 10,
+                      fig.height = 5, warning = FALSE, message = FALSE)
 ```
 
 
-# Nota
+### Nota
 
 O presente documento tem como único e simples objetivo de fazer a análise exploratória dos dados, a parte de modelagem, cabe ao software Python.
 
@@ -23,7 +22,7 @@ O presente documento tem como único e simples objetivo de fazer a análise expl
 ## Pacotes utilizados
 
 
-```{r pacotes, echo = TRUE, warning = FALSE, message = F}
+```{r pacotes}
 
 require(tidyverse)
 require(lubridate)
@@ -32,7 +31,7 @@ require(lubridate)
 ```
 
 
-## Dados utilizados
+## Estrutura inicial dos dados
 
 ```{r mostrar_dados, echo = TRUE, warning = FALSE, message = F}
 
@@ -40,28 +39,40 @@ dados <- read_csv(file = "data/mock_kaggle.csv")
 
 
 dados %>% 
-  head()
+  head(10)
 
 
 ```
 
-## Série temporal
+# Análise Exploratória dos Dados
 
-- É possível notar que em alguns dias da série histórica 
+## Série temporal de vendas
 
-```{r serie_historica, echo = TRUE, warning = FALSE, message = F}
+- É possível notar que, em determinados dias da série histórica, a quantidade de vendas foi 0
+
+```{r serie_historica_vendas, echo = TRUE, warning = FALSE, message = F, fig.align = "center"}
 
 dados %>% 
   ggplot(data = ., aes(x = data, y = venda)) +
   geom_line() +
-  # geom_point() +
-  theme_minimal(14) +
-  labs(x = "Data", y = "Preço")
-
-
+  theme_bw() +
+  labs(x = "Data", y = "Quantidade de vendas")
 
 ```
 
+## Série temporal do estoque
+
+
+```{r serie_historica_estoque, echo = TRUE, warning = FALSE, message = F, fig.align = "center"}
+
+dados %>% 
+  ggplot(data = ., aes(x = data, y = estoque)) +
+  geom_line() +
+  geom_point() +
+  theme_bw() +
+  labs(x = "Data", y = "Estoque")
+
+```
 
 # Verificar se é estacionária
 
