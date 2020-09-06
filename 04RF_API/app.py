@@ -6,11 +6,12 @@ from pickle import load
 app = Flask(__name__)
 model = load(open('model.pkl', 'rb'))
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def home():
-    return "Funcionou essa desgraça? Sim"
+    return "<h1>Está funcionando essa desgraça</h1> <p> Resposta: Sim </p>"
 
-@app.route('/results', methods=['POST'])
+@app.route("/results", methods = ["POST"])
+
 def predict():
     
     r = request.form
