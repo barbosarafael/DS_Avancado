@@ -18,6 +18,7 @@ ipython==7.19.0
 ipython-genutils==0.2.0
 jedi==0.17.2
 Jinja2==2.11.2
+joblib==0.17.0
 json5==0.9.5
 jsonschema==3.2.0
 jupyter-client==6.1.7
@@ -55,12 +56,15 @@ python-dateutil==2.8.1
 pytz==2020.4
 pyzmq==19.0.2
 requests==2.24.0
+scikit-learn==0.23.2
 scipy==1.5.4
 seaborn==0.11.0
 Send2Trash==1.5.0
 six==1.15.0
+sklearn==0.0
 terminado==0.9.1
 testpath==0.4.4
+threadpoolctl==2.1.0
 tornado==6.1
 traitlets==5.0.5
 urllib3==1.25.11
