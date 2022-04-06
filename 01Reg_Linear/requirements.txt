@@ -124,7 +124,7 @@ toml==0.10.1
 toolz==0.10.0
 tornado==6.0.4
 traitlets==4.3.3
-Twisted==18.9.0
+Twisted==22.2.0
 tzlocal==2.1
 ubuntu-advantage-tools==20.3
 ufw==0.36
